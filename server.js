@@ -12,9 +12,9 @@ var articleone={
         content: `
         <h3>Academics<h3>
         <ol>
-            <li><h3>Graduation<h3> : <p> Keshav mahavidalaya</p>
-            <li><h3>Post Graduation<h3> : <p> JIMS </p>
-            <li><h3>Post Doc<h3> : <p> IIT Delhi </p>
+            <li><h3>Graduation<h3> :  Keshav mahavidalaya
+            <li><h3>Post Graduation<h3> :  JIMS 
+            <li><h3>Post Doc<h3> :  IIT Delhi 
         </ol>
         `
     
