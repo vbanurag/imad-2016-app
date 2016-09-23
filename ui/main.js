@@ -1,18 +1,31 @@
 //counter
 
 var button = document.getElementById('counter');
-var counter=0;
+
 button.onclick = function(){
     
-    // Make a request to counter end point
-    
+    // create a request to counter end point
+    var request = new  XMLHttpRequest();
     
     //Captue the response and store into the variable
     
-    //Render the variable in counter sapn
-    counter = counter+1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
+    request.onreadychangestate = function(){
+       if(request.readyState === XMLHttpRequest.DONE) 
+       {
+           //take some action
+           if(request.status === 200)
+           {
+               var counter = request.responseText;
+               var span = document.getElementById('count');
+               span.innerHTML = counter.toString();
+           }
+       }
+       //do nothing
+    };
+    //Make a Request
+    
+    request.open('GET','http://http://vbanurag.imad.hasura-app.io/counter',true);
+    request.send(null);
     
 };
 
