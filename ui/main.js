@@ -15,15 +15,14 @@ button.onclick = function(){
            //take some action
            if(request.status == 200)
            {
-               var counter = request.responseText;
+               var count = request.responseText;
                var span = document.getElementById('count');
-               span.innerHTML = counter.toString();
+               span.innerHTML = count.toString();
            }
        }
        //do nothing
     };
     //Make a Request
-    
     request.open('GET','http://vbanurag.imad.hasura-app.io/counter',true);
     request.send(null);
     
