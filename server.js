@@ -67,6 +67,14 @@ app.get('/bio', function (req, res) {
   res.send(createTemplate(articleone));
 });
 
+var names =[];
+app.get('/submit-names/:name', function (req,res) {
+    var name = req.params.name;
+    names.push(name);
+    
+    res.send(JSON.stringify(names));
+});
+
 var counter=0;
 app.get('/counter', function(req, res)
 {
