@@ -9,11 +9,11 @@ button.onclick = function(){
     
     //Captue the response and store into the variable
     
-    request.onreadychangestate = function(){
+    request.onreadystatechange = function(){
        if(request.readyState === XMLHttpRequest.DONE) {
            //take some action
            if(request.status === 200){
-               document.getElementById('a').innerHTML= 'hello';
+               
                var count = request.responseText;
                var span = document.getElementById('count');
                span.innerHTML = count.toString();
