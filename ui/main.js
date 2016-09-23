@@ -27,8 +27,7 @@ button.onclick = function(){
     
 };
 
-var inputName = document.getElementById('name');
-var nam = inputName.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //Make a request to send sever and snd a name
@@ -56,6 +55,8 @@ submit.onclick = function(){
        //do nothing
     };
     //Make a Request
+    var inputName = document.getElementById('name');
+    var nam = inputName.value;
     request.open('GET','http://vbanurag.imad.hasura-app.io/submit-names?name=' + nam,true);
     request.send(null);
     //capture the list of list and rebder as list
