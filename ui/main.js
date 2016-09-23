@@ -27,3 +27,19 @@ button.onclick = function(){
     
 };
 
+var inputName = document.getElementById('name');
+var nam = inputName.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    //Make a request to send sever and snd a name
+    //capture the list of list and rebder as list
+    
+    var names = ['name1', 'name2', 'name3'];
+    var list = '';
+    for (var i = 0; i<names.length; i++)
+    {
+        list += '<li>' + names[i] +'</li>';
+    }
+    var ul = document.getElementById('nameList');
+    ul.innerHTML = list;
+};
