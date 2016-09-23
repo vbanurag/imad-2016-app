@@ -24,7 +24,7 @@ button.onclick = function(){
     };
     //Make a Request
     
-    request.open('GET','http://http://vbanurag.imad.hasura-app.io/counter',true);
+    request.open('GET','http://vbanurag.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
